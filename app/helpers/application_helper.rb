@@ -5,7 +5,7 @@ module ApplicationHelper
       if title_provide.empty?
 	 base_title
       else
-	 "#{base_title} | #{title_provide}"
+	 "#{base_title}#{title_provide}"
       end
    end
 end
