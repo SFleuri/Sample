@@ -1,4 +1,4 @@
-
+<% provide(:title, '') %>
 <h1>Super_exa_app</h1>
     <p>
       This is the home page for the
