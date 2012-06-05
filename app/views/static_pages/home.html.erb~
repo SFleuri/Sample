@@ -1,5 +1,5 @@
 <% provide(:title, '') %>
-=<div class="center hero-unit">
+<div class="center hero-unit">
   <h1>Super_exa_app</h1>
 
   <h2>
