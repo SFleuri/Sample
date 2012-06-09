@@ -9,6 +9,8 @@ group :development, :test do
   gem 'rspec-rails', '2.10.0'
   gem 'guard-rspec', '0.5.5'
   gem 'annotate' , '~>  2.4.1.beta'
+  gem 'win32console'
+  gem "rubygems-bundler", "~> 1.0.2"
 end
 
 # Gems used only for assets and not required
@@ -27,7 +29,7 @@ group :test do
   gem 'spork', '0.9.0'
   gem 'rb-fchange', '0.0.5'
   gem 'rb-notifu', '0.0.4'
-  gem 'win32console', '1.3.0'
+  gem 'win32console'
   gem 'factory_girl_rails', '1.4.0'
 end
 
