@@ -10,6 +10,8 @@ group :development, :test do
   gem 'guard-rspec', '0.5.5'
   gem 'annotate' , '~>  2.4.1.beta'
   gem 'win32console'
+  gem "eventmachine"
+  gem "guard-livereload"
 end
 
 # Gems used only for assets and not required
