@@ -99,7 +99,7 @@ describe "User pages" do
         		page.should have_selector('li', text: user.name)
       	end
     	end
-  end
+  	end
 end
 
 

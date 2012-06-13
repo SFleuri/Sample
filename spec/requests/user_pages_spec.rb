@@ -84,11 +84,14 @@ describe "User pages" do
 	end
 
 	describe "index" do
-    	before do
-      	sign_in FactoryGirl.create(:user)
-      	FactoryGirl.create(:user, name: "Bob", email: "bob@example.com")
-      	FactoryGirl.create(:user, name: "Ben", email: "ben@example.com")
-      	visit users_path
+    	let(:user) { FactoryGirl.create(:user) }
+   	
+		before(:all) { 30.times { FactoryGirl.create(:user) } }
+		after(:all) { User.delete_all }
+
+		before(:each) do
+			sign_in user
+			visit users_path
     	end
 
     	it { should have_selector('title', text: 'All users') }
