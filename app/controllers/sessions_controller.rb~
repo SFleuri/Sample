@@ -15,6 +15,11 @@ class SessionsController < ApplicationController
 	end
 
 	def destroy
+<<<<<<< HEAD
+=======
+		sign_out
+		redirect_to root_path
+>>>>>>> section-9
 	end
 
 
