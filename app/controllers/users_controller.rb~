@@ -43,20 +43,14 @@ class UsersController < ApplicationController
 	end
 
 	def destroy
-		User.find(params[:id]).destroy# unless User.find(params[:id]) == current_user
+		User.find(params[:id]).destroy unless User.find(params[:id]) == current_user
 		flash[:success] = "User destroyed."
 		redirect_to users_path
 	end
 
 	private
 
-	def signed_in_user
-		unless signed_in?
-			store_location
-			redirect_to signin_path, notice:"Signed in?"
-		end
-	end
-
+	
 	def correct_user
 		@user = User.find(params[:id])
 		redirect_to(root_path) unless current_user?(@user)
