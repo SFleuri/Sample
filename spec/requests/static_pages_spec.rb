@@ -31,7 +31,17 @@ describe "Static Pages" do
 					page.should have_selector("li##{item.id}", text: item.content)
 				end
 			end
+
+			describe "it should a have postcount" do
+				let(:count) { user.microposts.count }
+				it { should have_content(count) }
+			end
 		end
+
+		#describe "should have rightly paginated microposts" do
+				#before { visit user_path('99') }
+				#it { should have_selector("div#pagination") }
+		#end
 	end
 
 	describe "Help page" do
