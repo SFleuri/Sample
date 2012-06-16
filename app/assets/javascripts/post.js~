@@ -1,0 +1,12 @@
+
+function countDown() {
+	var count = 140 - jQuery('#micropost_content').val().length;
+	jQuery('.counts').text(count + ' characters remaining');
+}
+
+jQuery(document).ready(function($) {
+	countDown();
+	$('#micropost_content').change(countDown);
+	$('#micropost_content').keyup(countDown);
+})
+
